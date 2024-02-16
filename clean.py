@@ -10,6 +10,7 @@ def clean_data(input1, input2, output):
     merged_df = merged_df[~merged_df['job'].str.contains('insurance|Insurance')]
     merged_df.drop(columns='id', inplace=True)
     merged_df.to_csv(output, index=False)
+    print(merged_df.shape)
 
 
 if __name__ == "__main__":
